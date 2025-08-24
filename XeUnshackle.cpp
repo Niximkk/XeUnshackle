@@ -31,6 +31,7 @@ const CHAR* g_strMovieName = "embed:\\VID";
 // Get global access to the main D3D device
 extern D3DDevice* g_pd3dDevice;
 DWORD YellowText = 0xFFFFFF00;
+DWORD RedText = 0xFF770000;
 DWORD WhiteText = 0xFFFFFFFF;
 DWORD GreyText = 0xFF808080;
 DOUBLE dDefaultAutoStartTimer = 2; // 2 seconds
@@ -363,10 +364,10 @@ HRESULT XeUnshackle::Render()
 
     else
     {
-        ATG::RenderBackground(0xFF000032, 0xFF000032);
+        ATG::RenderBackground(0xFF220000, 0xFF000000);
         m_Font.Begin();
         m_Font.SetScaleFactors(1.5f, 1.5f);
-        m_Font.DrawText(0, 0, YellowText, wTitleHeaderBuf);
+        m_Font.DrawText(0, 0, WhiteText, wTitleHeaderBuf);
 
         // Pre-Release Build Identifier
         //m_Font.DrawText(840, 0, WhiteText, L"[TEST BUILD]");
@@ -375,22 +376,22 @@ HRESULT XeUnshackle::Render()
         m_Font.SetScaleFactors(1.0f, 1.0f);
 
         // General info
-        m_Font.DrawText(0, 70, YellowText, currentLocalisation->MainInfo);
+        m_Font.DrawText(0, 70, WhiteText, currentLocalisation->MainInfo);
 
         // Dashlaunch Info
-        m_Font.DrawText(0, 290, YellowText, wDLStatusBuf);
+        m_Font.DrawText(0, 290, WhiteText, wDLStatusBuf);
         if (bDLisLoaded)
         {
-            m_Font.DrawText(0, 320, YellowText, currentLocalisation->MainScrDL);
+            m_Font.DrawText(0, 320, WhiteText, currentLocalisation->MainScrDL);
         }
 
         // Console Info
-        m_Font.DrawText(0, 460, YellowText, wConTypeBuf);
-        m_Font.DrawText(0, 490, YellowText, wCPUKeyBuf);
-        m_Font.DrawText(0, 520, YellowText, wDVDKeyBuf);
+        m_Font.DrawText(0, 460, RedText, wConTypeBuf);
+        m_Font.DrawText(0, 490, RedText, wCPUKeyBuf);
+        m_Font.DrawText(0, 520, RedText, wDVDKeyBuf);
 
-        m_Font.DrawText(0, 570, YellowText, L"https://github.com/Byrom90/XeUnshackle");
-        m_Font.DrawText(0, 600, YellowText, L"https://byrom.uk");
+        m_Font.DrawText(0, 570, WhiteText, L"https://github.com/Byrom90/XeUnshackle");
+        m_Font.DrawText(0, 600, WhiteText, L"https://byrom.uk");
         
         // If the timer is not active, draw the normal button prompts, otherwise draw the countdown text
         if (m_autoStartExitTimer < 0.0)
