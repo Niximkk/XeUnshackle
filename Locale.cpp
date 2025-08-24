@@ -103,8 +103,8 @@ LocalisationMessages_t brazilian_portuguese = {
     L"Salvo em ConsoleInfo.txt",
     L"Falha ao salvar!",
     // Save Orig MAC
-    L"MAC original despejado em OriginalMACAddress.bin",
-    L"Não foi possível despejar o MAC original!",
+    L"MAC original dumpado em OriginalMACAddress.bin",
+    L"Não foi possível dumpar o MAC original!",
     // Save Auto-Start
     L"Início Automático salvo em AutoStart.txt",
     L"Falha ao salvar o AutoStart.txt!",
@@ -112,11 +112,12 @@ LocalisationMessages_t brazilian_portuguese = {
     L"Todos os patches foram aplicados!\nAgora a funcionalidade JTAG/RGH regular deve ser possível no seu sistema.\n\nISSO NÃO É PERSISTENTE!\nSeu console retornará a um estado completamente original e não modificado assim que for desligado.\nÉ ALTAMENTE recomendado que você faça agora o dump de uma cópia do seu nand!",
     L"Todos os plugins definidos em launch.ini serão carregados quando você sair deste aplicativo.\nO LiveBlock deve estar funcionando agora se estiver habilitado em launch.ini.\nConecte seu cabo de rede antes de sair para permitir que os stealths sejam autenticados corretamente.",
     GLYPH_X_BUTTON L" Salvar informações",
-    GLYPH_Y_BUTTON L" Despejar 1BL",
-    L"Pressione " GLYPH_BACK_BUTTON L" para sair",
-    L"Pressione " GLYPH_START_BUTTON L" para ativar o Início Automático",
+    GLYPH_Y_BUTTON L" Dumpar 1BL",
+    GLYPH_BACK_BUTTON L" para sair",
+    GLYPH_START_BUTTON L" para ativar o Auto Start",
     L"Início Automático em: %.1f segundos...",
-    L"Pressione " GLYPH_B_BUTTON L" para cancelar o Início Automático"
+    GLYPH_B_BUTTON L" para cancelar o Auto Start"
+
 };
 
 //LocalisationMessages_t portuguese = {
